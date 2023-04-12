@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attendance sheet</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Attendance</h1>     
+    <table>
+        <tr>
+            <th>course id </th>
+            <th>Attendance (in %)</th>
+        </tr>
+        <% items.forEach(function(data) { %>
+			<tr>
+				<td id ="ci"><%= data.cid %></td>
+				<td id="cn"><%= data.attend %></td>
+			</tr>
+		<% }); %>
+    </table>
+    <script>
+          
+  
+    </script>
+</body>
+</html>

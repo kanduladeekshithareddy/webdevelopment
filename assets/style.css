@@ -1,0 +1,131 @@
+body{
+  background-color:linear-gradient(black);
+}
+img{ 
+    background-repeat: no-repeat;
+    width:150px;
+    margin-left:20%;
+} 
+h3{
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 37%;
+  margin-bottom: 15%;
+}
+.brandname{
+  display:inline;
+  margin-left:15px;
+  position:absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:20px ;
+
+
+}
+.login-box {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    margin-top:5%;
+    padding: 40px;
+    opacity:0.9;
+    transform: translate(-50%, -50%);
+    background: rgba(133, 129, 123, 0.4);
+    box-sizing: border-box;
+    box-shadow: 0 25px 35px rgba(227, 223, 230, 0.6);
+    border-radius: 10px;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  .login-box .user-box input::placeholder{
+    color:#000;
+  }
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    /* border: none; */
+    border: 1px solid #000;
+    border-radius: 10px;
+    outline: none; 
+    box-shadow: 0 0 15px #000, 
+                0 0 5px #000,
+                0 0 5px #000,
+                0 0 1px #000;
+    background: transparent;
+  }
+  
+  .login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 2px;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #000000;
+    font-size: 12px;
+  }
+  .btn{
+    background-color: black;
+    outline: none;
+    border:none;
+  }
+  .login-box form .btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box .btn:hover { 
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    /* box-shadow: 0 0 5px #000,
+                0 0 25px #000,
+                0 0 50px #000,
+                0 0 10px #000; */
+  }
+  
+  .login-box .btn span {
+    position: absolute;
+    display: block;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+  
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box .btn span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000);
+    animation: btn-anim1 2s linear infinite;
+  }

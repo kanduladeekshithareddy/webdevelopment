@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:50%;
+            background-color: rgb(228, 233, 236);
+            border-radius: 15px;
+            margin-left:25%;
+        }
+        th,td{
+            padding-top: 2%;
+            text-align: center;
+        }
+        .card{
+            background-color: rgb(223, 202, 188);
+            
+            border-radius: 5px;
+        }
+        /*input[type=text] {
+            padding-top: 3%;
+            position:relative;
+            display:flex;
+            left :10%;
+            padding-top:65%;
+        width: 30%;
+        padding: 12px 20px;
+        margin-top:5%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        }
+
+        textarea {
+            z-index: 1;
+            position: relative;
+            display: flex;
+        width: 50%;
+        
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        /* resize: vertical; 
+        font-size: 16px;
+        }
+
+        input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        }
+        input[type=submit]:hover {
+        background-color: #45a049;
+        } */
+  input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Mentorship</h1>
+    <table>
+        <tr>
+            <th>mentor name </th>
+            <th>course id</th>
+            <th>mentor email</th>
+            <th>complient box</th>
+            <th>submit</th>
+        </tr>
+        <% item.forEach(function(data) { %>
+			<tr>
+				<td id ="ci"><%= data.mname %></td>
+				<td id="cn"><%= data.cid %></td>
+                <td>
+                    <p><a type="email" href="mailto:<%= data.memail%>"><%= data.memail%></a></p> 
+                </td>
+			</tr>
+		<% }); %>
+    </table>
+    <!-- <div class="card">
+        <input type="text" name="semail" id="sending" placeholder="enter the mail of mentor">
+        <textarea rows="5" cols="50" id="comb" placeholder="write your complaint here!"></textarea>
+        <input type="submit" name ="text" value="send" id="send"> 
+    </div> -->
+    <form action="/academics/mentor" method="POST">
+        <input type="email" name="email" placeholder="Your email"><br>
+        <textarea name="query" placeholder="Your query"></textarea><br>
+        <button type="submit">Submit</button>
+      </form>
+        
+
+</body>
+</html>

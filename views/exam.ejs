@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exam timetable </h1>
+    <table>
+        <tr>
+            <th>course id </th>
+            <th>exam date</th>
+            <th>timings</th>
+        </tr>
+        <% edata.forEach(function(data) { %>
+			<tr>
+				<td id ="ci"><%= data.cid %></td>
+				<td id="cn"><%= data.edate.toLocaleDateString('en-US')%></td>
+                <td id ="ci"><%= data.timings %></td>
+			</tr>
+		<% }); %>
+    </table>
+</body>
+</html>

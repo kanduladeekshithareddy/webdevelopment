@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Timetabel</h1>     
+    <table>
+        <tr>
+            <th>course id </th>
+            <th>week day</th>
+            <th>timings</th>
+        </tr>
+        <% itemstt.forEach(function(data) { %>
+			<tr>
+				<td id ="ci"><%= data.cid %></td>
+				<td id="cn"><%= data.workday%></td>
+                <td id ="ci"><%= data.timigs %></td>
+			</tr>
+		<% }); %>
+    </table>
+</body>
+</html>
